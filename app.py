@@ -1,5 +1,8 @@
 from database import (veritabani_olustur, ornek_filmler_ekle,
                       filmleri_listele, ture_gore_filtrele, film_puanla)
+from ai_engine import film_oner, istatistikler
+
+#ANA PROGRAM
 
 def menu():
     print("\n" + "="*50)
@@ -9,8 +12,11 @@ def menu():
     print("2. Türe Göre Filtrele")
     print("3. Film Puanla")
     print("4. Çıkış")
+    print("5. 🤖 Film Öner (Yapay Zeka)")
+    print("6. 📊 İstatistikler")
+
     print("-"*50)
-    return input("Seçiminiz (1-4): ")
+    return input("Seçiminiz (1-6): ")
 
 
 def filmleri_goster():
@@ -53,6 +59,15 @@ def main():
         elif secim == "4":
             print("Görüşmek üzere! 🎬")
             break
+        elif secim == "5":
+            oneriler = film_oner(1)
+            print("\n🤖 Size önerilen filmler:")
+            for film, skor in oneriler:
+                print(f'  ★ {film[1]} ({film[3]}) - {film[2]} - Skor: {skor}')
+        elif secim == "6":
+        for stat in istatistikler():
+            print(f'  {stat[0]:<15} | {stat[1]} film | ★ {stat[2]}')
+
         else:
             print("Geçersiz seçim!")
 
