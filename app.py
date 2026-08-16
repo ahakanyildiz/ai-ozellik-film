@@ -6,7 +6,7 @@ from ai_engine import film_oner, istatistikler
 
 def menu():
     print("\n" + "="*50)
-    print("  🎬  FİLMBOT - Akıllı Film Öneri Sistemi")
+    print("  🎬  FİLMBOT - Akıllı Film Öneri Sistemii")
     print("="*50)
     print("1. Tüm Filmleri Listele")
     print("2. Türe Göre Filtrele")
@@ -49,6 +49,8 @@ def main():
     ornek_filmler_ekle()
 
     while True:
+        import time
+        time.sleep(1)
         secim = menu()
         if secim == "1":
             filmleri_goster()
@@ -65,8 +67,8 @@ def main():
             for film, skor in oneriler:
                 print(f'  ★ {film[1]} ({film[3]}) - {film[2]} - Skor: {skor}')
         elif secim == "6":
-        for stat in istatistikler():
-            print(f'  {stat[0]:<15} | {stat[1]} film | ★ {stat[2]}')
+            for stat in istatistikler():
+                print(f'  {stat[0]:<15} | {stat[1]} film | ★ {stat[2]}')
 
         else:
             print("Geçersiz seçim!")
