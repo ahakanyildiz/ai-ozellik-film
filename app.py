@@ -6,7 +6,7 @@ from ai_engine import film_oner, istatistikler
 
 def menu():
     print("\n" + "="*50)
-    print("  🎬  FİLMBOT - Akıllı Film Öneri Sistemi")
+    print("  🎬  FİLMBOT - Akıllı Film Öneri Sistemiii")
     print("="*50)
     print("1. Tüm Filmleri Listele")
     print("2. Türe Göre Filtrele")
