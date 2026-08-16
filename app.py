@@ -47,7 +47,7 @@ def puanla():
 def main():
     veritabani_olustur()
     ornek_filmler_ekle()
-
+    print("Test branchı çalışıyor!")
     while True:
         import time
         time.sleep(1)
